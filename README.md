@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @vpadala89
-- 👀 I’m interested in DEvOps
+- 👀 I’m interested in DevOps
 - 🌱 I’m currently learning ...
 - 💞️ I’m looking to collaborate on ...
 
