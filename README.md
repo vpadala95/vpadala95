@@ -1,8 +1,6 @@
-- 👋 Hi, I’m venkatesh padala
-- 👀 I’m interested in DevOps
-- 🌱 I’m currently working as a Devops Engineer ...
-- 💞️ I’m looking to collaborate on ...
+# Hello, folks! <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
 
+My Name is Venkatesh Padala and i'm a DevOps engineer. I'm from Hyderabad currently living in Bangalore adn currently working in IBM.
 
 ![](https://img.shields.io/badge/<WORD_ON_LEFT>-<WORD_ON_RIGHT>-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
 
