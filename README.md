@@ -10,8 +10,6 @@ Skills and Tools:
 <img src='https://lieno.com.br/site/wp-content/uploads/2020/04/oracle-cloud-logo.png' alt='OCI' height='30'>
 
 
-Terraform, Ansible, Docker, Azure, Oracle cloud
-
 - 🔭 I’m currently working on IBM 
 - 🌱 I’m currently learning kubernetes 
 - 💬 ask me about anything, i am happy to help
