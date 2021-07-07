@@ -11,7 +11,7 @@ Skills: Jenkins, Terraform, Ansible, Docker, Azure, Oracle cloud
 
 
 
-[<img src='https://cdn.jsdelivr.net/npm/simple-icons@5.5.0/icons/docker.svg' alt='dockerhub' height='40'>](https://hub.docker.com/u/vpadala5)  
+[<img src='https://cdn.jsdelivr.net/npm/@styled-icons/simple-icons@10.35.0/Box' alt='dockerhub' height='40'>](https://hub.docker.com/u/vpadala5)  
 
 
 ![Profile views](https://gpvc.arturio.dev/v-padala)  
