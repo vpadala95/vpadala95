@@ -1,5 +1,5 @@
 ### Hi there 👋, My name is Venkatesh padala
-My Name is Venkatesh Padala and i'm a DevOps engineer. I'm from Hyderabad currently living in Bangalore adn currently working in IBM.
+I'm a DevOps engineer. I'm from Hyderabad currently living in Bangalore and currently working with IBM.
 
 Skills: Jenkins, Terraform, Ansible, Docker, Azure, Oracle cloud
 
