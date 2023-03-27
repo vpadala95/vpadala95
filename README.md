@@ -8,7 +8,9 @@ Skills and Tools:
 <img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png' alt='docker' height='30'>
 <img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/azure/azure.png' alt='azure' height='30'>
 <img src='https://lieno.com.br/site/wp-content/uploads/2020/04/oracle-cloud-logo.png' alt='OCI' height='30'>
-![Github]([https://img.shields.io/badge/-Python-05122A?style=flat&logo=python](https://img.shields.io/badge/-Github-lightgrey?style=flat&logo=github))&nbsp;
+
+
+![Git]([https://img.shields.io/badge/-Python-05122A?style=flat&logo=python](https://img.shields.io/badge/-Github-lightgrey?style=flat&logo=github))&nbsp;
 
 
 
