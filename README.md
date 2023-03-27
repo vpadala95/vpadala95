@@ -1,5 +1,5 @@
 ### Hi there 👋, My name is Venkatesh padala
-I'm a DevOps engineer. I'm from Hyderabad currently living in Bangalore.
+I'm a DevOps and Hybrid Cloud Engineer. I'm from Hyderabad currently living in Bangalore. As DevOps and Hybrid Cloud Engineer with 9+ years of overall IT experience and 5+ Years of experience in Designing and Implementing secure DevOps Solutions on Google cloud. As a DevOps Engineer, I have professional hands-on expertise in various DevOps tools and technology including secure CI/CD, Container Orchestration, Infrastructure automation and management tools. Apart from Google cloud, I also have working knowledge on other cloud Platforms like Microsoft Azure, Oracle cloud Infrastructure.
 
 Skills and Tools: 
 
