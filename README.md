@@ -8,14 +8,7 @@ I'm a DevOps and Hybrid Cloud Engineer. I'm from Hyderabad currently living in B
 <img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png' alt='docker' height='30'>
 <img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/azure/azure.png' alt='azure' height='30'>
 <img src='https://lieno.com.br/site/wp-content/uploads/2020/04/oracle-cloud-logo.png' alt='OCI' height='30'>
-<img src='https://img.shields.io/badge/-Github-lightgrey?style=flat&logo=github' alt='Git' height='30'>
-
-
 ![Git](https://img.shields.io/badge/-Github-lightgrey?style=flat&logo=github)&nbsp;
-
-
-
-
 
 ### 📫 &nbsp; How to reach me:
 
