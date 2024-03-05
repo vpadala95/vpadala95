@@ -12,7 +12,10 @@ I'm a DevOps and Hybrid Cloud Engineer. I'm from Hyderabad currently living in B
 ![GCP](https://img.shields.io/badge/GoogleCloud-GCP-lightgrey?style=flat&logo=googlecloud)&nbsp;
 
 
-### 📫 &nbsp; How to reach me:
-
-<a href="https://www.linkedin.com/in/venkateshpadala/"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a> &nbsp;
+###  &nbsp; Connect with me:
+<p align="left">
+<a href="https://linkedin.com/in/vpadala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vpadala" height="30" width="40" /></a>
+<a href="https://fb.com/vpadala95" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="vpadala95" height="30" width="40" /></a>
+<a href="https://instagram.com/vpadala95" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="vpadala95" height="30" width="40" /></a>
+</p>
 <a href="mailto:vpadala@outlook.com"><img alt="Mail" src="https://img.shields.io/badge/Outlook-Mail-blue" /></a> &nbsp;
