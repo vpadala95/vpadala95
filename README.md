@@ -1,5 +1,9 @@
 ### Hi there 👋, My name is Venkatesh padala
-I'm a DevOps and Hybrid Cloud Engineer. I'm from Hyderabad currently living in Bangalore. As DevOps and Hybrid Cloud Engineer with 9+ years of overall IT experience and 5+ Years of experience in Designing and Implementing secure DevOps Solutions on Google cloud. As a DevOps Engineer, I have professional hands-on expertise in various DevOps tools and technology including secure CI/CD, Container Orchestration, Infrastructure automation and management tools. Apart from Google cloud, I also have working knowledge on other cloud Platforms like Microsoft Azure, Oracle cloud Infrastructure.
+A passionate and skilled DevOps, SRE, and Cloud Engineer with a strong background in infrastructure provisioning, automation, and monitoring. I have completed and been certified by Google Cloud, AWS, OCI, Azure and IBM
+
+Have experience working with tools such as Jenkins, Terraform, and Ansible to streamline development processes and ensure efficient code deployment. Proficient in managing and monitoring cloud infrastructure services on AWS and GCP, as well as maintaining high availability in Kubernetes-based container clusters. Successfully implemented monitoring and logging tools like ELK, Grafana to ensure comprehensive visibility into system performance and implemented GitOps for managing infrastructure as code. My expertise also includes integrating automation testing into the CI/CD pipeline and developing scripts to automate tasks, improving efficiency and reducing manual effort. 
+
+With a Master's degree in Computer applications, I am committed to continuous learning and professional growth. I am seeking opportunities to leverage my skills and contribute to the success of DevOps, SRE and cloud engineering projects.
 
 ### 🛠 &nbsp;Skills and Tools
 
