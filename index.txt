@@ -23,7 +23,7 @@ Bengaluru, India
 # navbar
 
 About
-Resume
+Experience
 Portfolio
 Blog
 Contact
@@ -89,7 +89,7 @@ alt = client logo
 
 # resume
 
-Resume
+Experience
 
 Education
 
