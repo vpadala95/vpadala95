@@ -7,11 +7,11 @@ With a Master's degree in Computer applications, I am committed to continuous le
 
 ### 🛠 &nbsp;Skills and Tools
 
-<img src='https://raw.githubusercontent.com/github/explore/4546263bd5739353083c33dada43f8f31e7d1fd6/topics/jenkins/jenkins.png' alt='Jenkins' height='30'><img src='https://i.pinimg.com/originals/28/ec/74/28ec7440a57536eebad2931517aa1cce.png' alt='Terraform' height='30'>
-<img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ansible/ansible.png' alt='ansible' height='30'>
-<img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png' alt='docker' height='30'>
-<img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/azure/azure.png' alt='azure' height='30'>
-<img src='https://lieno.com.br/site/wp-content/uploads/2020/04/oracle-cloud-logo.png' alt='OCI' height='30'>
+<img src='https://raw.githubusercontent.com/github/explore/4546263bd5739353083c33dada43f8f31e7d1fd6/topics/jenkins/jenkins.png' alt='Jenkins' height='40'><img src='https://i.pinimg.com/originals/28/ec/74/28ec7440a57536eebad2931517aa1cce.png' alt='Terraform' height='40'>
+<img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/ansible/ansible.png' alt='ansible' height='40'>
+<img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png' alt='docker' height='40'>
+<img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/azure/azure.png' alt='azure' height='40'>
+<img src='https://lieno.com.br/site/wp-content/uploads/2020/04/oracle-cloud-logo.png' alt='OCI' height='40'>
 ![Git](https://img.shields.io/badge/-Github-lightgrey?style=flat&logo=github)&nbsp;
 ![GCP](https://img.shields.io/badge/GoogleCloud-GCP-lightgrey?style=flat&logo=googlecloud)&nbsp;
 
