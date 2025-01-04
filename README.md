@@ -12,6 +12,8 @@ With a Master's degree in Computer applications, I am committed to continuous le
 <img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/docker/docker.png' alt='docker' height='40'>
 <img src='https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/azure/azure.png' alt='azure' height='40'>
 <img src='https://lieno.com.br/site/wp-content/uploads/2020/04/oracle-cloud-logo.png' alt='OCI' height='40'>
+<img src='https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg' alt='AWS' height='40'>
+https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg
 ![Git](https://img.shields.io/badge/-Github-lightgrey?style=flat&logo=github)&nbsp;
 ![GCP](https://img.shields.io/badge/GoogleCloud-GCP-lightgrey?style=flat&logo=googlecloud)&nbsp;
 
