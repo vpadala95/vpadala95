@@ -1,9 +1,18 @@
 ### Hi there 👋, My name is Venkatesh padala
-A passionate and skilled DevOps, SRE, and Cloud Engineer with a strong background in infrastructure provisioning, automation, and monitoring. I have completed and been certified by Google Cloud, AWS, OCI, Azure and IBM
+Hi, I’m Venkatesh Padala, a passionate DevOps/DevSecOps Engineer experience in driving seamless automation, optimising cloud infrastructures, and accelerating software delivery cycles. With a strong foundation in IT and Telecom, I specialize in building Continuous Integration and Continuous Delivery (CI/CD) pipelines, automating complex deployments, and leveraging cloud services to create scalable and reliable solutions.
 
-Have experience working with tools such as Jenkins, Terraform, and Ansible to streamline development processes and ensure efficient code deployment. Proficient in managing and monitoring cloud infrastructure services on AWS and GCP, as well as maintaining high availability in Kubernetes-based container clusters. Successfully implemented monitoring and logging tools like ELK, Grafana to ensure comprehensive visibility into system performance and implemented GitOps for managing infrastructure as code. My expertise also includes integrating automation testing into the CI/CD pipeline and developing scripts to automate tasks, improving efficiency and reducing manual effort. 
+I thrive on transforming manual processes into efficient automated workflows, using tools like Terraform, Docker, Kubernetes, Jenkins, and Ansible. My goal is to help organizations enhance productivity by delivering high-quality, mission-critical software with speed and precision.
 
-With a Master's degree in Computer applications, I am committed to continuous learning and professional growth. I am seeking opportunities to leverage my skills and contribute to the success of DevOps, SRE and cloud engineering projects.
+🚀 Key Expertise:
+☁️ Cloud Platforms: GCP, AWS
+🔧 Automation & IaC: Terraform, Ansible
+⚙️ CI/CD: Jenkin, Github-Actions
+🐳 Containerization: Docker, Kubernetes
+📊 Monitoring & Logging: Prometheus, Grafana, ELK
+🔍 Version Control & SCM: Git, Github, Bitbucket
+💻 Scripting & Automation: Shell Scripting, Task Automation
+
+I’m committed to continuous improvement, and I'm always eager to learn and explore new technologies that drive innovation in the DevOps space.
 
 ### 🛠 &nbsp;Skills and Tools
 
