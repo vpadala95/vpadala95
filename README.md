@@ -12,7 +12,7 @@ I thrive on transforming manual processes into efficient automated workflows, us
 🔍 Version Control & SCM: Git, Github, Bitbucket
 💻 Scripting & Automation: Shell Scripting, Task Automation
 
-I’m committed to continuous improvement, and I'm always eager to learn and explore new technologies that drive innovation in the DevOps space.
+I’m committed to continuous improvement, and I'm always eager to learn and explore new technologies that drive innovation in the DevOps space
 
 ### 🛠 &nbsp;Skills and Tools
 
