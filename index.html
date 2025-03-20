@@ -1,1160 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Venkatesh - Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#6366f1',
+secondary: '#14b8a6'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+</style>
 </head>
-
-<body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Venkatesh Padala" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Venkatesh Padala">Venkatesh Padala</h1>
-
-          <p class="title">DevOps and Hybrid Cloud Engineer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:vpadala@outlook.com" class="contact-link">vpadala@outlook.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Bengaluru, India</address>
-            </div>
-          </li>
-          <li class="contact-item">
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('./assets/resume-example.pdf')"
-              >            
-            
-            <div class="icon-box">
-              <ion-icon name="download"></ion-icon>
-            </div>
-          </button></div>
-            <div class="contact-info">
-              <p class="contact-title">Click to</p>
-
-              <address>Download Resume</address>
-
-          </div>
-          </li>
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://fb.com/vpadala95" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://instagram.com/vpadala95" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://github.com/vpadala95" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/venkateshpadala/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm a DevOps and Hybrid Cloud Engineer. I'm from Hyderabad currently living in Bangalore. 
-            As DevOps and Hybrid Cloud Engineer with 10+ years of overall IT experience and 5+ Years of experience in Designing and Implementing secure DevOps Solutions on Google cloud.
-          </p>
-
-          <p>
-            As a DevOps Engineer, I have professional hands-on expertise in various DevOps tools and technology including secure CI/CD, 
-            Container Orchestration, Infrastructure automation and management tools.
-            Apart from Google cloud, I also have working knowledge on other cloud Platforms like Microsoft Azure, Oracle cloud Infrastructure.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/devops.png" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Devops</h4>
-
-                <p class="service-item-text">
-                  Having 6+ years of experience in Devops tools like Git,Terraform,Ansible,Docker,Kubernetes,etc...
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/cloud.png" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Cloud</h4>
-
-                <p class="service-item-text">
-                  Having good experience in multiple cloud platforms like GCP,AWS,OCI and Azure
-                </p>
-              </div>
-
-            </li>
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">CI/CD</h4>
-
-                <p class="service-item-text">
-                  Implemented Complete end-to-end CI/CD pipelines for multiple projects.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Automation" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Automation</h4>
-
-                <p class="service-item-text">
-                  Automating manual tasks using Shell script and Python .
-                </p>
-              </div>
-
-            </li>
-
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - Certifications
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Certifications</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="https://www.credly.com/badges/c8506b4c-6f64-4c62-894e-399c5f33a526">
-                <img src="./assets/images/Azure-fundamentals.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.credly.com/badges/0c9082a8-83dd-4914-b73e-17a311ed406a">
-                <img src="./assets/images/OCI-associate.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.credly.com/badges/ca4d94f7-7f5b-416d-a6c6-47c8b887c029">
-                <img src="./assets/images/OCI-Foundation.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.credly.com/badges/fe1a706f-4d76-4ed3-8ce5-8a82067f32e2">
-                <img src="./assets/images/IBM-Advocate.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.credential.net/3502236a-97fd-45d5-83f3-334181491d33">
-                <img src="./assets/images/GCP-Architect.png" alt="client logo">
-              </a>
-            </li>
-
-
-          </ul>
-
-        </section>
-
-      </article>
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-       <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">senior consultant — Thoughtworks</h4>
-
-              <span>September2023 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
-            </li>
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Infrastructure specialist — IBM</h4>
-
-              <span>April-2020 — September-2023</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Senior Technical Support — MSys Technologies</h4>
-
-              <span>Sep 2016 — April 2020</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Associate Datacentre Operations — IMedX Inc</h4>
-
-              <span>Nov 2013 — Sep 2016</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Sri Vani school of management</h4>
-
-              <span>2009 — 2012</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+<body class="bg-gray-50">
+<div class="min-h-screen flex">
+<!-- Left Sidebar -->
+<div class="w-1/3 bg-white border-r border-gray-200 p-8 fixed h-screen overflow-y-auto">
+<div class="text-center mb-8">
+<img src="https://public.readdy.ai/ai/img_res/d20d69ce1fde59b6e24ab82e9916a525.jpg"
+alt="Profile"
+class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
+<h1 class="text-2xl font-bold text-gray-900">Venkatesh padala</h1>
+<p class="text-primary font-medium mb-4">Cloud and Devops Engineer</p>
+<a href="#" download class="inline-flex items-center justify-center px-4 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors">
+<i class="ri-download-line w-5 h-5 flex items-center justify-center mr-2"></i>
+Download Resume
+</a>
+</div>
+<div class="mb-8">
+<h2 class="text-lg font-semibold text-gray-900 mb-4">Contact</h2>
+<div class="space-y-3">
+<a href="mailto:vpadala@outlook.com" class="flex items-center text-gray-600 hover:text-primary">
+<i class="ri-mail-line w-5 h-5 flex items-center justify-center mr-2"></i>
+vpadala@outlook.com
+</a>
+<a href="tel:+919000313233" class="flex items-center text-gray-600 hover:text-primary">
+<i class="ri-phone-line w-5 h-5 flex items-center justify-center mr-2"></i>
++91-9000313233
+</a>
+<a href="#" class="flex items-center text-gray-600 hover:text-primary">
+<i class="ri-map-pin-line w-5 h-5 flex items-center justify-center mr-2"></i>
+Bengaluru, IN
+</a>
+<a href="https://www.linkedin.com/in/vpadala95" target="_blank" class="flex items-center text-gray-600 hover:text-primary">
+<i class="ri-linkedin-line w-5 h-5 flex items-center justify-center mr-2"></i>
+LinkedIn
+</a>
+<a href="https://github.com/vpadala95" target="_blank" class="flex items-center text-gray-600 hover:text-primary">
+<i class="ri-github-line w-5 h-5 flex items-center justify-center mr-2"></i>
+GitHub
+</a>
+</div>
+</div>
+<div class="mb-8">
+<h2 class="text-lg font-semibold text-gray-900 mb-4">Technical Skills</h2>
+<div class="space-y-6">
+<div>
+<h3 class="text-sm font-medium text-gray-900 mb-3">Frontend</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center space-x-2">
+<i class="ri-html5-line w-5 h-5 flex items-center justify-center text-orange-500"></i>
+<span class="text-gray-600 text-sm">HTML5</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-css3-line w-5 h-5 flex items-center justify-center text-blue-500"></i>
+<span class="text-gray-600 text-sm">CSS3</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-javascript-line w-5 h-5 flex items-center justify-center text-yellow-500"></i>
+<span class="text-gray-600 text-sm">JavaScript</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-reactjs-line w-5 h-5 flex items-center justify-center text-blue-400"></i>
+<span class="text-gray-600 text-sm">React</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-vuejs-line w-5 h-5 flex items-center justify-center text-green-500"></i>
+<span class="text-gray-600 text-sm">Vue.js</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-tailwind-line w-5 h-5 flex items-center justify-center text-teal-500"></i>
+<span class="text-gray-600 text-sm">Tailwind</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-medium text-gray-900 mb-3">Backend</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center space-x-2">
+<i class="ri-nodejs-line w-5 h-5 flex items-center justify-center text-green-600"></i>
+<span class="text-gray-600 text-sm">Node.js</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-database-2-line w-5 h-5 flex items-center justify-center text-blue-600"></i>
+<span class="text-gray-600 text-sm">MongoDB</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-database-line w-5 h-5 flex items-center justify-center text-orange-600"></i>
+<span class="text-gray-600 text-sm">PostgreSQL</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-server-line w-5 h-5 flex items-center justify-center text-purple-600"></i>
+<span class="text-gray-600 text-sm">GraphQL</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-cloud-line w-5 h-5 flex items-center justify-center text-blue-500"></i>
+<span class="text-gray-600 text-sm">AWS</span>
+</div>
+<div class="flex items-center space-x-2">
+<i class="ri-docker-line w-5 h-5 flex items-center justify-center text-blue-400"></i>
+<span class="text-gray-600 text-sm">Docker</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<div class="w-2/3 ml-[33.333333%] p-8">
+<div class="flex items-center justify-start mb-8 space-x-2 border-b border-gray-200">
+<button class="px-6 py-3 text-gray-900 border-b-2 border-primary font-medium" onclick="switchTab('home')">Home</button>
+<button class="px-6 py-3 text-gray-600 hover:text-gray-900 font-medium" onclick="switchTab('projects')">Projects</button>
+<button class="px-6 py-3 text-gray-600 hover:text-gray-900 font-medium" onclick="switchTab('experience')">Experience</button>
+<button class="px-6 py-3 text-gray-600 hover:text-gray-900 font-medium" onclick="switchTab('blogs')">Blogs</button>
+</div>
+<div id="home" class="tab-content">
+<div class="mb-12">
+<h2 class="text-2xl font-bold text-gray-900 mb-6">About Me</h2>
+<div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+<p class="text-gray-600 leading-relaxed mb-4">
+Hi, I’m Venkatesh Padala, a passionate DevOps/DevSecOps Engineer experience in driving seamless automation, optimising cloud infrastructures, and accelerating software delivery cycles. With a strong foundation in IT and Telecom, I specialize in building Continuous Integration and Continuous Delivery (CI/CD) pipelines, automating complex deployments, and leveraging cloud services to create scalable and reliable solutions.
+</p>
+<p class="text-gray-600 leading-relaxed mb-4">
+I thrive on transforming manual processes into efficient automated workflows, using tools like Terraform, Docker, Kubernetes, Jenkins, and Ansible. My goal is to help organizations enhance productivity by delivering high-quality, mission-critical software with speed and precision.
+</p>
+<p class="text-gray-600 leading-relaxed">
+I’m committed to continuous improvement, and I'm always eager to learn and explore new technologies that drive innovation in the DevOps space.
+</p>
+</div>
+<div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+<h2 class="text-lg font-semibold text-gray-900 mb-4">Certifications</h2>
+<div class="space-y-4">
+<div class="flex items-start">
+<img src="https://public.readdy.ai/ai/img_res/89f76fae3b2ce5723ecb50e79456254d.jpg" 
+alt="AWS Certification" 
+class="w-12 h-12 rounded-lg mr-4 object-cover">
+<div>
+<h3 class="font-medium text-gray-900">AWS Certified Solutions Architect - Professional</h3>
+<p class="text-sm text-gray-500">Amazon Web Services • Issued Dec 2023</p>
+</div>
+</div>
+<div class="flex items-start">
+<img src="https://public.readdy.ai/ai/img_res/efdf43e8b23c850b8c5928697fc76a92.jpg" 
+alt="Google Cloud Certification" 
+class="w-12 h-12 rounded-lg mr-4 object-cover">
+<div>
+<h3 class="font-medium text-gray-900">Google Cloud Professional Cloud Architect</h3>
+<p class="text-sm text-gray-500">Google Cloud • Issued Aug 2023</p>
+</div>
+</div>
+<div class="flex items-start">
+<img src="https://public.readdy.ai/ai/img_res/52c1eb0bf2dbfb4da448c02d4741caed.jpg" 
+alt="Microsoft Azure Certification" 
+class="w-12 h-12 rounded-lg mr-4 object-cover">
+<div>
+<h3 class="font-medium text-gray-900">Microsoft Certified: Azure Solutions Architect Expert</h3>
+<p class="text-sm text-gray-500">Microsoft • Issued Mar 2023</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-sm overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern e-commerce website interface with clean design, showing product grid and shopping cart, professional UI&width=400&height=200&seq=2&orientation=landscape"
+alt="E-commerce Platform"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">E-commerce Platform</h3>
+<p class="text-gray-600 text-sm mb-4">A scalable e-commerce platform built with microservices architecture.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">React</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Node.js</span>
+<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">MongoDB</span>
+</div>
+<div class="flex items-center justify-between">
+<a href="https://github.com/example/ecommerce" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
+<i class="ri-github-fill mr-1"></i>
+View Code
+</a>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center">
+Live Demo
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-sm overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=dashboard interface showing analytics and data visualization, modern UI design with charts and graphs&width=400&height=200&seq=3&orientation=landscape"
+alt="Analytics Dashboard"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Analytics Dashboard</h3>
+<p class="text-gray-600 text-sm mb-4">Real-time analytics dashboard with advanced data visualization.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Vue.js</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">D3.js</span>
+<span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Firebase</span>
+</div>
+<div class="flex items-center justify-between">
+<a href="https://github.com/example/analytics" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
+<i class="ri-github-fill mr-1"></i>
+View Code
+</a>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center">
+Live Demo
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-12">
+<h2 class="text-2xl font-bold text-gray-900 mb-6">Contribution Activity</h2>
+<div class="bg-white rounded-xl shadow-sm p-6">
+<div id="contributionChart" class="w-full h-[300px]"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="experience" class="tab-content hidden">
+<h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Work Experience</h2>
+<div class="space-y-8 max-w-3xl mx-auto">
+<div class="bg-white rounded-xl shadow-sm p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="text-lg font-semibold text-gray-900">Senior Software Engineer</h3>
+<p class="text-primary">Google</p>
+</div>
+<span class="text-sm text-gray-500">2022 - Present</span>
+</div>
+<ul class="list-disc list-inside text-gray-600 space-y-2">
+<li>Led a team of 5 engineers in developing cloud-native applications</li>
+<li>Improved system performance by 40% through architecture optimization</li>
+<li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-sm p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="text-lg font-semibold text-gray-900">Software Engineer</h3>
+<p class="text-primary">Microsoft</p>
+</div>
+<span class="text-sm text-gray-500">2019 - 2022</span>
+</div>
+<ul class="list-disc list-inside text-gray-600 space-y-2">
+<li>Developed and maintained microservices architecture</li>
+<li>Collaborated with product teams to implement new features</li>
+<li>Mentored junior developers and conducted code reviews</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-sm p-6">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="text-lg font-semibold text-gray-900">Junior Developer</h3>
+<p class="text-primary">Amazon</p>
+</div>
+<span class="text-sm text-gray-500">2017 - 2019</span>
+</div>
+<ul class="list-disc list-inside text-gray-600 space-y-2">
+<li>Built and maintained RESTful APIs</li>
+<li>Implemented responsive web designs</li>
+<li>Participated in agile development processes</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="projects" class="tab-content hidden">
+<h2 class="text-2xl font-bold text-gray-900 mb-6">Featured Projects</h2>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-white rounded-xl shadow-sm overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern e-commerce website interface with clean design, showing product grid and shopping cart, professional UI&width=400&height=200&seq=2&orientation=landscape"
+alt="E-commerce Platform"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">E-commerce Platform</h3>
+<p class="text-gray-600 text-sm mb-4">A scalable e-commerce platform built with microservices architecture.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">React</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Node.js</span>
+<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">MongoDB</span>
+</div>
+<div class="flex items-center justify-between">
+<a href="https://github.com/example/ecommerce" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
+<i class="ri-github-fill mr-1"></i>
+View Code
+</a>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center">
+Live Demo
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-sm overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=dashboard interface showing analytics and data visualization, modern UI design with charts and graphs&width=400&height=200&seq=3&orientation=landscape"
+alt="Analytics Dashboard"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Analytics Dashboard</h3>
+<p class="text-gray-600 text-sm mb-4">Real-time analytics dashboard with advanced data visualization.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Vue.js</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">D3.js</span>
+<span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Firebase</span>
+</div>
+<div class="flex items-center justify-between">
+<a href="https://github.com/example/analytics" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
+<i class="ri-github-fill mr-1"></i>
+View Code
+</a>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center">
+Live Demo
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-sm overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/f5363c0e7dcf4e731b180adfaa89e0e7.jpg"
+alt="Chat Application"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Real-time Chat App</h3>
+<p class="text-gray-600 text-sm mb-4">WebSocket-based chat application with real-time messaging.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Socket.io</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Express</span>
+<span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Redis</span>
+</div>
+<div class="flex items-center justify-between">
+<a href="https://github.com/example/chat" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
+<i class="ri-github-fill mr-1"></i>
+View Code
+</a>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center">
+Live Demo
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-sm overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/abe885a643364cec4455afa2ce4b3ad4.jpg"
+alt="Task Manager"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Task Manager</h3>
+<p class="text-gray-600 text-sm mb-4">Collaborative task management tool with real-time updates.</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Angular</span>
+<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">NestJS</span>
+<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">PostgreSQL</span>
+</div>
+<div class="flex items-center justify-between">
+<a href="https://github.com/example/taskmanager" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
+<i class="ri-github-fill mr-1"></i>
+View Code
+</a>
+<a href="#" class="text-primary hover:text-primary/80 flex items-center">
+Live Demo
+<i class="ri-external-link-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="blogs" class="tab-content hidden">
+<h2 class="text-2xl font-bold text-gray-900 mb-6">Latest Blog Posts</h2>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-white rounded-xl shadow-sm overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/1e5e771bb2e268375212bce3f0a8d8b7.jpg"
+alt="Blog Post 1"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Microservices Architecture Best Practices</h3>
+<p class="text-gray-600 text-sm mb-4">A comprehensive guide to building scalable microservices architecture...</p>
+<div class="flex items-center justify-between">
+<span class="text-sm text-gray-500">March 15, 2024</span>
+<a href="#" class="text-primary hover:text-primary/80">Read More</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-sm overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/5a396d05aa1119068276b5e803924113.jpg"
+alt="Blog Post 2"
+class="w-full h-48 object-cover">
+<div class="p-6">
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Cloud Native Development</h3>
+<p class="text-gray-600 text-sm mb-4">Exploring the benefits and challenges of cloud native development...</p>
+<div class="flex items-center justify-between">
+<span class="text-sm text-gray-500">March 1, 2024</span>
+<a href="#" class="text-primary hover:text-primary/80">Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+function switchTab(tabId) {
+document.querySelectorAll('.tab-content').forEach(content => {
+content.classList.add('hidden');
+});
+document.getElementById(tabId).classList.remove('hidden');
+document.querySelectorAll('button').forEach(btn => {
+btn.classList.remove('border-b-2', 'border-primary', 'text-gray-900');
+btn.classList.add('text-gray-600');
+});
+event.target.classList.remove('text-gray-600');
+event.target.classList.add('border-b-2', 'border-primary', 'text-gray-900');
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const chart = echarts.init(document.getElementById('contributionChart'));
+const option = {
+animation: false,
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+borderColor: '#eee',
+borderWidth: 1,
+textStyle: {
+color: '#1f2937'
+}
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+top: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'category',
+boundaryGap: false,
+data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+axisLine: {
+lineStyle: {
+color: '#e5e7eb'
+}
+},
+axisLabel: {
+color: '#6b7280'
+}
+},
+yAxis: {
+type: 'value',
+axisLine: {
+lineStyle: {
+color: '#e5e7eb'
+}
+},
+axisLabel: {
+color: '#6b7280'
+},
+splitLine: {
+lineStyle: {
+color: '#f3f4f6'
+}
+}
+},
+series: [{
+name: 'Contributions',
+type: 'line',
+smooth: true,
+data: [30, 45, 62, 58, 75, 90, 84, 98, 89, 95, 78, 88],
+itemStyle: {
+color: '#6366f1'
+},
+areaStyle: {
+color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+offset: 0,
+color: 'rgba(99, 102, 241, 0.3)'
+}, {
+offset: 1,
+color: 'rgba(99, 102, 241, 0.1)'
+}])
+},
+lineStyle: {
+width: 3
+},
+symbol: 'none'
+}]
+};
+chart.setOption(option);
+window.addEventListener('resize', function() {
+chart.resize();
+});
+});
+</script>
 </body>
-
 </html>
