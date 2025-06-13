@@ -24,7 +24,20 @@ I’m committed to continuous improvement, and I'm always eager to learn and exp
 <img src='https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg' alt='AWS' height='40'>
 https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg
 ![Git](https://img.shields.io/badge/-Github-lightgrey?style=flat&logo=github)&nbsp;
-![GCP](https://img.shields.io/badge/GoogleCloud-GCP-lightgrey?style=flat&logo=googlecloud)&nbsp;
+![GCP](https://img.shields.io/badge/GoogleCloud-GCP-lightgrey?style=flat&logo=googlecloud)&nbsp;## 🏆 Certifications
+
+- **AWS Certified Solutions Architect – Associate**  
+  Issued by: Amazon Web Services (AWS)  
+  Date: June 2025  
+  [View Certificate](https://www.your-certificate-link.com)
+
+- **Google Cloud Professional DevOps Engineer**  
+  Issued by: Google Cloud  
+  Date: March 2024  
+  [View Certificate](https://www.your-certificate-link.com)
+
+![AWS Certified](https://img.shields.io/badge/AWS-Certified-blue)
+![GCP Certified](https://img.shields.io/badge/GCP-DevOps-green)
 
 
 ###  &nbsp; Connect with me:
