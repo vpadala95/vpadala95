@@ -1,14 +1,5 @@
 # Your Name - Personal Portfolio
 
-<!-- Profile Image: Add your actual image URL here -->
-<!-- Placeholder image for demonstration purposes -->
-<p align="center">
-  <img src="https://placehold.co/200x200/0f172a/cbd5e1?text=Your+Photo" alt="Your Name" width="200" height="200" style="border-radius: 50%; border: 4px solid #0ea5e9;">
-</p>
-
-## 🚀 Quick Links
-
-<!-- Using emojis for visual "tabs" in the quick links -->
 [👋 About Me](#about-me) | [💼 Experience](#experience) | [✨ Projects](#projects) | [🛠️ Skills](#skills) | [🎓 Education](#education) | [✉️ Connect](#connect)
 
 ---
