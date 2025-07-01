@@ -1,5 +1,5 @@
 
-[👋 About Me](#about-me) | [💼 Experience](#experience) | [✨ Projects](#projects) | [🛠️ Skills](#skills) | [🎓 Education](#education) | [✉️ Connect](#connect)
+[👋 About Me](#about-me) [🛠️ Skills](#skills) [💼 Experience](#experience)  [🎓 Education](#education)
 
 ---
 
