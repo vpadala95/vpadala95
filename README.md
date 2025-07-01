@@ -13,12 +13,11 @@ I thrive on transforming manual processes into efficient automated workflows, us
 
 ## <a name="skills"></a>🛠️ My Skillset
 
-**Programming Languages:** Python, JavaScript (ES6+), TypeScript, Go, Java, C++
-**Web Frameworks:** React, Node.js, Django, Flask, Express.js, Next.js, Vue.js
-**Databases:** PostgreSQL, MongoDB, MySQL, Redis, SQLite
-**Cloud Platforms:** AWS (EC2, S3, Lambda, RDS), Google Cloud Platform (GCP)
-**Tools & Technologies:** Docker, Kubernetes, Git, GitHub Actions, Jenkins, RESTful APIs, GraphQL, WebSockets, Jest, Pytest
-**Soft Skills:** Problem Solving, Team Collaboration, Communication, Adaptability, Continuous Learning
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+  </a>
+</p>
 
 ---
 ## <a name="experience"></a>💼 Experience
