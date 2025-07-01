@@ -5,7 +5,9 @@
 
 ## <a name="about-me"></a>👋 About Me
 
-Hi there! I'm [Your Name], a **Full-Stack Developer** passionate about building innovative and user-friendly web applications. With X years of experience, I love tackling challenges and transforming ideas into robust, scalable solutions. My journey in tech is driven by curiosity, a commitment to clean code, and the joy of continuous learning. When I'm not coding, you can find me [mention a hobby or interest, e.g., "exploring new hiking trails" or "experimenting with new recipes"].
+Hi, I’m Venkatesh Padala, a passionate DevOps/DevSecOps Engineer experience in driving seamless automation, optimising cloud infrastructures, and accelerating software delivery cycles. With a strong foundation in IT and Telecom, I specialize in building Continuous Integration and Continuous Delivery (CI/CD) pipelines, automating complex deployments, and leveraging cloud services to create scalable and reliable solutions.
+
+I thrive on transforming manual processes into efficient automated workflows, using tools like Terraform, Docker, Kubernetes, Jenkins, and Ansible. My goal is to help organizations enhance productivity by delivering high-quality, mission-critical software with speed and precision.
 
 ---
 
