@@ -15,7 +15,7 @@ I thrive on transforming manual processes into efficient automated workflows, us
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+    <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,aws,bash,bitbucket,elasticsearch,gcp,github,githubactions,gitlab,grafana,jenkins,linux,nginx,postgres,prometheus,py,redis,terraform," />
   </a>
 </p>
 
