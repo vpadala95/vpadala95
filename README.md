@@ -11,6 +11,16 @@ I thrive on transforming manual processes into efficient automated workflows, us
 
 ---
 
+## <a name="skills"></a>🛠️ My Skillset
+
+**Programming Languages:** Python, JavaScript (ES6+), TypeScript, Go, Java, C++
+**Web Frameworks:** React, Node.js, Django, Flask, Express.js, Next.js, Vue.js
+**Databases:** PostgreSQL, MongoDB, MySQL, Redis, SQLite
+**Cloud Platforms:** AWS (EC2, S3, Lambda, RDS), Google Cloud Platform (GCP)
+**Tools & Technologies:** Docker, Kubernetes, Git, GitHub Actions, Jenkins, RESTful APIs, GraphQL, WebSockets, Jest, Pytest
+**Soft Skills:** Problem Solving, Team Collaboration, Communication, Adaptability, Continuous Learning
+
+---
 ## <a name="experience"></a>💼 Experience
 
 ### Senior Software Engineer | Tech Solutions Inc.
@@ -25,31 +35,6 @@ I thrive on transforming manual processes into efficient automated workflows, us
 * Developed and maintained dynamic front-end components using modern JavaScript and a custom UI library, focusing on intuitive user experiences.
 * Collaborated closely with product managers and UX/UI designers to translate intricate requirements into actionable technical specifications.
 * Engaged in the complete software development lifecycle, from initial concept and design to deployment, testing, and ongoing maintenance.
-
----
-
-## <a name="projects"></a>✨ Featured Projects
-
-### Project Alpha: [Project Name]
-A comprehensive web application designed for [brief purpose, e.g., "streamlining personal finance management"]. This project showcases robust user authentication, interactive data visualization, and real-time updates.
-**Technologies Used:** React, Node.js, Express, MongoDB, Tailwind CSS
-[Link to Project Alpha Repo](https://github.com/your-username/project-alpha) | [Live Demo (Optional)](https://your-project-alpha-demo.com)
-
-### Project Beta: [Project Name]
-A [type of application, e.g., "responsive mobile-first e-commerce platform"] built to [brief purpose, e.g., "support local artisan businesses"]. Key features include a secure payment gateway integration and a comprehensive admin panel for content management.
-**Technologies Used:** Django, Python, PostgreSQL, HTML, CSS, JavaScript
-[Link to Project Beta Repo](https://github.com/your-username/project-beta) | [Live Demo (Optional)](https://your-project-beta-demo.com)
-
----
-
-## <a name="skills"></a>🛠️ My Skillset
-
-**Programming Languages:** Python, JavaScript (ES6+), TypeScript, Go, Java, C++
-**Web Frameworks:** React, Node.js, Django, Flask, Express.js, Next.js, Vue.js
-**Databases:** PostgreSQL, MongoDB, MySQL, Redis, SQLite
-**Cloud Platforms:** AWS (EC2, S3, Lambda, RDS), Google Cloud Platform (GCP)
-**Tools & Technologies:** Docker, Kubernetes, Git, GitHub Actions, Jenkins, RESTful APIs, GraphQL, WebSockets, Jest, Pytest
-**Soft Skills:** Problem Solving, Team Collaboration, Communication, Adaptability, Continuous Learning
 
 ---
 
