@@ -1,4 +1,3 @@
-# Your Name - Personal Portfolio
 
 [👋 About Me](#about-me) | [💼 Experience](#experience) | [✨ Projects](#projects) | [🛠️ Skills](#skills) | [🎓 Education](#education) | [✉️ Connect](#connect)
 
