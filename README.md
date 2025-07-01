@@ -1,17 +1,10 @@
-
-[👋 About Me](#about-me) [🛠️ Skills](#skills) [💼 Experience](#experience)  [🎓 Education](#education)
-
----
-
-## <a name="about-me"></a>👋 About Me
-
 Hi, I’m Venkatesh Padala, a passionate DevOps/DevSecOps Engineer experience in driving seamless automation, optimising cloud infrastructures, and accelerating software delivery cycles. With a strong foundation in IT and Telecom, I specialize in building Continuous Integration and Continuous Delivery (CI/CD) pipelines, automating complex deployments, and leveraging cloud services to create scalable and reliable solutions.
 
 I thrive on transforming manual processes into efficient automated workflows, using tools like Terraform, Docker, Kubernetes, Jenkins, and Ansible. My goal is to help organizations enhance productivity by delivering high-quality, mission-critical software with speed and precision.
 
 ---
 
-## <a name="skills"></a>🛠️ My Skillset
+## <a name="skills"></a>🛠️ Skillset
 
 <p align="center">
   <a href="https://skillicons.dev">
@@ -39,11 +32,5 @@ I thrive on transforming manual processes into efficient automated workflows, us
 
 ## <a name="education"></a>🎓 Education
 
-### Master of Science in Computer Science | University of Tech
-**[City, State] | [Graduation Date]**
-* Relevant Coursework: Advanced Algorithms, Distributed Systems, Machine Learning
-
-### Bachelor of Engineering in Software Engineering | State University
-**[City, State] | [Graduation Date]**
-* Dean's List (all semesters)
-* Final Year Project: [Brief description of project]
+### Master of Computer Science | Sri Vani Educational Society Group of Institutions
+**[Chevuturu, Andhra Pradesh] | [2012]**
