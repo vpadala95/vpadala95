@@ -788,9 +788,40 @@ main {
 .timeline-item { position: relative; }
 
 .timeline-item:not(:last-child) { margin-bottom: 20px; }
+.timeline-item-subtitle {
+  font-size: 16px; /* Smaller font size */
+  color: #ffffff;    /* Lighter color */
+  margin-top: 0;   /* Remove default top margin from h4 */
+  margin-bottom: 10px; /* Add space below subtitle */
+}
+.timeline-header {
+  display: flex;                /* Makes its children (h4 and span) flex items */
+  justify-content: space-between; /* Pushes the first item (h4) to the left and the second item (span) to the right */
+  align-items: baseline;        /* Vertically aligns them based on their text baseline for a clean look */
+  /* If you had a subtitle h4, you'd need to adjust your HTML to group title/subtitle together
+     or handle them with more complex flex layouts or nesting. */
+}
 
+/* Optional: Clean up default margins on the h4 if they interfere */
+.timeline-header .timeline-item-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Optional: Style the span for the date */
+.timeline-header span {
+  font-size: 0.9em; /* Slightly smaller for the date */
+  color: #777;
+  white-space: nowrap; /* Prevents the date from wrapping to a new line */
+}
+
+/* Ensure the timeline-header itself takes up the full width of its parent li */
+/* This is usually default for a div, but worth confirming if it looks off */
+.timeline-item .timeline-header {
+    width: 80%; /* Ensures it spans the full width of the timeline-item */
+}
 .timeline-item-title {
-  font-size: var(--fs-6);
+  font-size: var(--fs-7);
   line-height: 1.3;
   margin-bottom: 7px;
 }
@@ -822,7 +853,23 @@ main {
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
+.timeline-points { /* or .timeline-item ol */
+  list-style: circle; /* This will bring back the numbers (1, 2, 3...) */
+  padding-left: 25px;  /* Adjust as needed to make space for the numbers and indent */
+  /* You might also consider list-style-position: inside; if numbers are off-screen */
+  /* list-style-position: inside; */
+}
 
+/* If you have li { padding: 0; margin: 0; } and want indents for these */
+.timeline-points li { /* or .timeline-item ol li */
+  padding-left: 0; /* Ensures individual list items don't have extra padding */
+}
+
+/* If the numbers are still not appearing due to a very strong override,
+   you might need to target the li elements within the ol more specifically */
+.timeline-points li {
+    list-style: circle !important; /* Use !important only if absolutely necessary */
+}
 .timeline-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
@@ -1899,6 +1946,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 * Experience
 	 */
 
-  .timeline-text { max-width: 700px; }
+  .timeline-text { max-width: 810px; }
 
 }
