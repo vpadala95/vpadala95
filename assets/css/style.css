@@ -761,7 +761,7 @@ main {
 
 
 /*-----------------------------------*\
-  #RESUME
+  #Experience
 \*-----------------------------------*/
 
 .article-title { margin-bottom: 30px; }
@@ -1395,8 +1395,8 @@ textarea.form-input::-webkit-resizer { display: none; }
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 18px;
-    padding: 30px;
+    gap: 10px;
+    padding: 5px;
   }
 
   .service-icon-box {
@@ -1485,7 +1485,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-   * #RESUME
+   * #Experience
    */
 
   .timeline-list { margin-left: 65px; }
@@ -1714,10 +1714,32 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 30px;
     padding: 0 20px;
   }
-
+  .scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #805ad5; /* a lighter purple */
+}
   .navbar-link { font-weight: var(--fw-500); }
+  @keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px); /* Float up */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.skill-bubble {
+    animation: float 3s ease-in-out infinite;
+}
 
-
+/* Add slight delays for a more natural, non-uniform movement */
+.skill-bubble:nth-child(2n) {
+    animation-delay: 0.5s;
+}
+.skill-bubble:nth-child(3n) {
+    animation-delay: 1s;
+}
 
   /**
    * ABOUT
@@ -1726,8 +1748,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* service */
 
   .service-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 15px;
   }
 
   /* testimonials */
@@ -1874,7 +1896,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   /**
-	 * RESUME
+	 * Experience
 	 */
 
   .timeline-text { max-width: 700px; }
