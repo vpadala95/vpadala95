@@ -1,382 +1,1201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkatesh Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            /* Ensure full dark mode by default */
-            @apply bg-gray-900 text-gray-100;
-            /* Center content vertically and horizontally */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh; /* Ensure body takes full viewport height */
-        }
-        .bento-grid {
-            display: grid;
-            gap: 2rem; /* Gap between bento boxes */
-            grid-template-columns: 1fr; /* Single column on small screens */
-            grid-template-rows: auto;
-            padding: 3rem;
-            max-width: auto;
-            /* Added min-height to make the bento boxes taller */
-            min-height: 90vh; /* Make the grid take up 90% of viewport height */
-            box-sizing: border-box; /* Include padding in element's total width and height */
-            width: 100%; /* Ensure it takes full width within its flex container */
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
 
-        @media (min-width: 768px) { /* Medium screens and up */
-            .bento-grid {
-                grid-template-columns: 1fr 2fr; /* Two columns: 1/3 and 2/3 */
-                grid-template-rows: auto;
-            }
-        }
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-        .bento-box {
-            @apply bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700;
-        }
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-        .tab-button {
-            @apply px-4 py-2 rounded-md font-medium text-gray-400 hover:text-gray-100 hover:bg-gray-700 transition-colors duration-200;
-        }
-
-        .tab-button.active {
-            @apply bg-purple-600 text-white shadow-md;
-        }
-
-        /* Custom scrollbar for content areas */
-        .scrollable-content::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .scrollable-content::-webkit-scrollbar-track {
-            background: #2d3748; /* bg-gray-800 */
-            border-radius: 10px;
-        }
-
-        .scrollable-content::-webkit-scrollbar-thumb {
-            background: #6b46c1; /* bg-purple-600 */
-            border-radius: 10px;
-        }
-
-        .scrollable-content::-webkit-scrollbar-thumb:hover {
-            background: #805ad5; /* a lighter purple */
-        }
-
-        /* Keyframes for the floating bubble animation */
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-8px); /* Float up */
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        /* Apply the animation to skill bubbles */
-        .skill-bubble {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* Add slight delays for a more natural, non-uniform movement */
-        .skill-bubble:nth-child(2n) {
-            animation-delay: 0.5s;
-        }
-        .skill-bubble:nth-child(3n) {
-            animation-delay: 1s;
-        }
-    </style>
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-gray-100">
 
-    <div class="bento-grid">
-        <!-- Pane 1: Profile and Contact -->
-        <div class="bento-box flex flex-col items-center justify-center text-center p-8 md:p-6">
-            <img src="./assets/images/image.png" alt="Profile Picture" class="w-32 h-32 rounded-full mb-4 border-4 border-purple-500 shadow-md">
-            <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Venkatesh Padala</h1>
-            <p class="text-md md:text-lg text-gray-400 mb-6">DevOps Engineer | Cloud & Automation Specialist</p>
+<body>
 
-            <div class="flex space-x-6 mb-6"> <!-- Added mb-6 for spacing below icons -->
-                <!-- Email Icon -->
-                <a href="mailto:jane.doe@example.com" class="text-gray-300 hover:text-purple-400 transition-colors duration-200" aria-label="Email">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-1 10a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12z"></path></svg>
-                </a>
-                <!-- LinkedIn Icon -->
-                <a href="https://linkedin.com/in/vpadala95" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-purple-400 transition-colors duration-200" aria-label="LinkedIn">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23 0H1.77C.8 0 0 .77 0 1.73v20.54C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0zM7.18 20.45H3.5V9.18h3.68v11.27zM5.33 7.62c-1.21 0-2.2-.97-2.2-2.17 0-1.19.99-2.17 2.2-2.17 1.22 0 2.2.98 2.2 2.17 0 1.2-.98 2.17-2.2 2.17zm15.15 12.83h-3.68v-5.56c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.66H9.78V9.18h3.53v1.62h.05c.49-.93 1.69-1.89 3.48-1.89 3.72 0 4.41 2.45 4.41 5.64v6.09z"/></svg>
-                </a>
-                <!-- GitHub Icon -->
-                <a href="https://github.com/vpadala95" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-purple-400 transition-colors duration-200" aria-label="GitHub">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.799 8.205 11.385.6.11.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.609-4.043-1.609-.547-1.387-1.334-1.758-1.334-1.758-1.088-.745.083-.73.083-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.807 1.304 3.49.997.108-.775.419-1.304.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.382 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.4 3.003-.404 1.02.004 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.656.238 2.876.118 3.176.77.838 1.233 1.91 1.233 3.22 0 4.61-2.805 5.62-5.475 5.922.43.37.81 1.102.81 2.22s-.01 4.01-.015 4.54c0 .318.22.69.825.57C20.565 21.796 24 17.301 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd"/></svg>
-                </a>
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+
+          <p class="title">Web developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <!-- Resume Download Button -->
-            <a href="./assets/resume.pdf" download="venkatesh_resume.pdf" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors duration-200 flex items-center justify-center">
-                <i class="fas fa-download mr-2"></i> Download Resume
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">June 23, 1982</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Sacramento, California, USA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
             </a>
-        </div>
+          </li>
 
-        <!-- Pane 2: About, Experience, Projects, and Skills with Tabs -->
-        <div class="bento-box flex flex-col">
-            <!-- Aligned tabs to the right -->
-            <div class="flex justify-end space-x-2 md:space-x-4 mb-6 flex-wrap">
-                <button class="tab-button active" data-tab="about">About Me</button>
-                <button class="tab-button" data-tab="experience">Experience</button>
-                <button class="tab-button" data-tab="projects">Projects</button>
-                <button class="tab-button" data-tab="blogs">Blogs</button> <!-- New Blogs Tab Button -->
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
+            I enjoy
+            turning complex problems into simple, beautiful and intuitive designs.
+          </p>
+
+          <p>
+            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
+            Moreover, I
+            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
+            across your
+            message and identity in the most creative way. I created web design for many famous brand companies.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+
+                <p class="service-item-text">
+                  I make high-quality photos of any category at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
             </div>
 
-            <div id="tab-content" class="flex-grow">
-                <!-- About Me Tab Content (now includes skills and certifications) -->
-                <div id="about" class="tab-pane active">
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">A Bit About Me</h2>
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        Hello! I'm Venkatesh Padala, a seasoned DevOps Engineer with over 11 years of extensive experience in architecting, implementing, and managing robust, scalable, and highly available infrastructure and software delivery pipelines.
-                    </p>
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        My expertise spans across the entire DevOps lifecycle, from continuous integration and delivery (CI/CD) to infrastructure as code (IaC) with <span class="font-semibold text-purple-300">Terraform</span>, containerization and orchestration using <span class="font-semibold text-purple-300">Kubernetes</span>, monitoring, and <span class="font-semibold text-purple-300">Cloud</span> cost optimization. I have a proven track record of leveraging a wide array of industry-leading DevOps tools and technologies to drive efficiency, automate complex workflows, and foster a culture of seamless collaboration between development and operations teams. I am passionate about solving complex challenges and enabling rapid, reliable software deployments.
-                    </p>
+            <div class="modal-content">
 
-                    <!-- Cloud Certifications Section -->
-                    <h3 class="text-xl font-semibold text-purple-400 mt-6 mb-3">Certifications</h3>
-                    <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-4">
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer">
-                            <img src="https://images.credly.com/images/4ea0ec5c-6258-4c26-9282-6ed233c0c7ac/image.png" alt="Google Professional Cloud Architect" class="w-12 h-12 rounded-full mb-1">
-                            <span class="text-sm text-gray-200 text-center">Google Professional Cloud Architect</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer">
-                            <img src="https://placehold.co/40x40/4285F4/ffffff?text=GCP" alt="Google Cloud Professional Cloud Developer" class="w-10 h-10 rounded-full mb-1">
-                            <span class="text-sm text-gray-200 text-center">GCP Cloud Developer</span>
-                        </div>
-                    </div>
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
 
-                    <!-- Skills Section - Now part of About Me -->
-                    <h3 class="text-xl font-semibold text-purple-400 mt-6 mb-3">My Key Skills</h3>
-                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                        <!-- Example Skill Buttons with Font Awesome Icons -->
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fab fa-react text-4xl text-blue-400 mb-1"></i>
-                            <span class="text-sm text-gray-200">React</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fab fa-node-js text-4xl text-green-400 mb-1"></i>
-                            <span class="text-sm text-gray-200">Node.js</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fab fa-docker text-4xl text-blue-500 mb-1"></i>
-                            <span class="text-sm text-gray-200">Docker</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fab fa-python text-4xl text-yellow-400 mb-1"></i>
-                            <span class="text-sm text-gray-200">Python</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fab fa-aws text-4xl text-orange-400 mb-1"></i>
-                            <span class="text-sm text-gray-200">AWS</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fab fa-git-alt text-4xl text-red-500 mb-1"></i>
-                            <span class="text-sm text-gray-200">Git</span>
-                        </div>
-                         <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fas fa-code text-4xl text-blue-300 mb-1"></i> <!-- Generic code icon for TypeScript -->
-                            <span class="text-sm text-gray-200">TypeScript</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fas fa-database text-4xl text-gray-400 mb-1"></i> <!-- Generic database icon for SQL -->
-                            <span class="text-sm text-gray-200">SQL</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fab fa-vuejs text-4xl text-green-500 mb-1"></i>
-                            <span class="text-sm text-gray-200">Vue.js</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fas fa-hashtag text-4xl text-purple-300 mb-1"></i> <!-- Generic icon for C# -->
-                            <span class="text-sm text-gray-200">C#</span>
-                        </div>
-                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
-                            <i class="fas fa-cubes text-4xl text-cyan-400 mb-1"></i> <!-- Generic icon for Kubernetes -->
-                            <span class="text-sm text-gray-200">Kubernetes</span>
-                        </div>
-                    </div>
-                </div>
+              <time datetime="2021-06-14">14 June, 2021</time>
 
-                <!-- Experience Tab Content -->
-                <div id="experience" class="tab-pane hidden">
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">My Professional Journey</h2>
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
 
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-purple-400">Senior Software Engineer</h3>
-                        <p class="text-gray-400">Tech Solutions Inc. | Jan 2022 - Present</p>
-                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-                            <li>Led the development of a new microservices architecture, improving system scalability by 40%.</li>
-                            <li>Mentored junior developers and conducted code reviews, fostering a culture of quality.</li>
-                            <li>Implemented CI/CD pipelines, reducing deployment time by 50%.</li>
-                            <li>Designed and implemented robust RESTful APIs for various client-side applications.</li>
-                            <li>Optimized application performance, resulting in a 15% reduction in load times.</li>
-                        </ul>
-                    </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-purple-400">Software Developer</h3>
-                        <p class="text-gray-400">Web Innovations Co. | Jun 2019 - Dec 2021</p>
-                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-                            <li>Developed and maintained responsive user interfaces using React and Redux.</li>
-                            <li>Collaborated with design team to translate UI/UX wireframes into high-quality code.</li>
-                            <li>Optimized database queries, leading to a 20% improvement in data retrieval times.</li>
-                            <li>Participated in daily stand-ups and agile sprint planning meetings.</li>
-                            <li>Contributed to the design and implementation of new features for core products.</li>
-                        </ul>
-                    </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-purple-400">Junior Developer Intern</h3>
-                        <p class="text-gray-400">Startup X | May 2018 - Aug 2018</p>
-                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-                            <li>Assisted in front-end development tasks and bug fixing.</li>
-                            <li>Gained hands-on experience with version control (Git) and agile methodologies.</li>
-                            <li>Wrote unit tests and integration tests for new features.</li>
-                        </ul>
-                    </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-purple-400">Freelance Web Developer</h3>
-                        <p class="text-gray-400">Self-Employed | 2017 - Present (Part-time)</p>
-                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-                            <li>Developed custom websites for small businesses and individuals.</li>
-                            <li>Managed client communication, project requirements, and delivery timelines.</li>
-                            <li>Specialized in WordPress and custom HTML/CSS/JS solutions.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Projects Tab Content -->
-                <div id="projects" class="tab-pane hidden">
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Featured Projects</h2>
-
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-purple-400">E-commerce Platform</h3>
-                        <p class="text-gray-400">A full-stack e-commerce application built with MERN stack.</p>
-                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-                            <li>Features: User authentication, product catalog, shopping cart, payment gateway integration.</li>
-                            <li>Technologies: React, Node.js, Express, MongoDB, Stripe API.</li>
-                        </ul>
-                        <div class="mt-3 flex space-x-4">
-                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-                        </div>
-                    </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-purple-400">Task Management App</h3>
-                        <p class="text-gray-400">A responsive task management application with real-time updates.</p>
-                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-                            <li>Features: CRUD operations for tasks, drag-and-drop reordering, user collaboration.</li>
-                            <li>Technologies: Vue.js, Firebase (Firestore, Authentication).</li>
-                        </ul>
-                        <div class="mt-3 flex space-x-4">
-                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold text-purple-400">Personal Blog</h3>
-                        <p class="text-gray-400">A static site generated blog for sharing technical articles.</p>
-                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-                            <li>Features: Markdown support, syntax highlighting, responsive design.</li>
-                            <li>Technologies: Next.js, Tailwind CSS, Markdown.</li>
-                        </ul>
-                        <div class="mt-3 flex space-x-4">
-                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- New Blogs Tab Content -->
-                <div id="blogs" class="tab-pane hidden">
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">My Latest Blogs</h2>
-
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-purple-400">Understanding Microservices Architecture</h3>
-                        <p class="text-gray-400 mb-2">A deep dive into designing and implementing scalable microservices.</p>
-                        <a href="https://medium.com/@janedoe/understanding-microservices-architecture-example-link" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-500 underline flex items-center">
-                            Read on Medium <i class="fab fa-medium ml-2"></i>
-                        </a>
-                    </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-purple-400">Getting Started with React Hooks</h3>
-                        <p class="text-gray-400 mb-2">A beginner-friendly guide to functional components and hooks in React.</p>
-                        <a href="https://medium.com/@janedoe/getting-started-with-react-hooks-example-link" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-500 underline flex items-center">
-                            Read on Medium <i class="fab fa-medium ml-2"></i>
-                        </a>
-                    </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-xl font-semibold text-purple-400">DevOps Best Practices for Small Teams</h3>
-                        <p class="text-gray-400 mb-2">Tips and tools to streamline your development and operations workflow.</p>
-                        <a href="https://medium.com/@janedoe/devops-best-practices-for-small-teams-example-link" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-500 underline flex items-center">
-                            Read on Medium <i class="fab fa-medium ml-2"></i>
-                        </a>
-                    </div>
-                </div>
             </div>
+
+          </section>
+
         </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+
+              <span>2007 — 2008</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+
+              <span>2006 — 2007</span>
+
+              <p class="timeline-text">
+                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
+                omnis..
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+              <span>2002 — 2004</span>
+
+              <p class="timeline-text">
+                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
+                magni dolores
+                eos.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2015 — Present</span>
+
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art director</h4>
+
+              <span>2013 — 2015</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+
+              <span>2010 — 2013</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabPanes = document.querySelectorAll('.tab-pane');
+  </main>
 
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons and hide all panes
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabPanes.forEach(pane => pane.classList.add('hidden'));
 
-                    // Add active class to the clicked button
-                    button.classList.add('active');
 
-                    // Show the corresponding tab pane
-                    const targetTabId = button.dataset.tab;
-                    document.getElementById(targetTabId).classList.remove('hidden');
-                });
-            });
 
-            // Set initial height for scrollable content based on parent
-            const tabContentContainer = document.getElementById('tab-content');
-            const parentBox = tabContentContainer.closest('.bento-box');
 
-            const adjustTabContentHeight = () => {
-                // Calculate available height for content within the bento-box
-                // Subtract the height of the tab buttons section and any top/bottom padding/margin
-                const tabButtonsHeight = tabButtons[0].closest('div').offsetHeight;
-                const parentPaddingY = parseFloat(getComputedStyle(parentBox).paddingTop) + parseFloat(getComputedStyle(parentBox).paddingBottom);
-                const availableHeight = parentBox.clientHeight - tabButtonsHeight - parentPaddingY - 24; // 24px for mb-6 on tab buttons div
 
-                tabContentContainer.style.height = `${availableHeight}px`;
-            };
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
-            // Adjust height on load and on window resize
-            adjustTabContentHeight();
-            window.addEventListener('resize', adjustTabContentHeight);
-        });
-    </script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
