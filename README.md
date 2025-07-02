@@ -11,13 +11,3 @@ I thrive on transforming manual processes into efficient automated workflows, us
     <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,aws,bash,bitbucket,elasticsearch,gcp,github,githubactions,gitlab,grafana,jenkins,linux,nginx,postgres,prometheus,py,redis,terraform," />
   </a>
 </p>
-
----
-
-## <a name="Certifications"></a>🛠️ Certifications
-
-<a href="https://www.credly.com/badges/5cb39044-5b86-40ce-a9c5-74dcc8b5ec2b" title="Professional Cloud Architect Certification"><img src="https://images.credly.com/size/340x340/images/71c579e0-51fd-4247-b493-d2fa8167157a/image.png" alt="Professional Cloud Architect Certification" width="80" height="80"></a>
-<a href="https://www.credly.com/badges/5cb39044-5b86-40ce-a9c5-74dcc8b5ec2b" title="Professional Cloud Architect Certification"><img src="https://images.credly.com/size/340x340/images/71c579e0-51fd-4247-b493-d2fa8167157a/image.png" alt="Professional Cloud Architect Certification" width="80" height="80"></a>
-<a href="https://www.credly.com/badges/5cb39044-5b86-40ce-a9c5-74dcc8b5ec2b" title="Professional Cloud Architect Certification"><img src="https://images.credly.com/size/340x340/images/71c579e0-51fd-4247-b493-d2fa8167157a/image.png" alt="Professional Cloud Architect Certification" width="80" height="80"></a>
-<a href="https://www.credly.com/badges/5cb39044-5b86-40ce-a9c5-74dcc8b5ec2b" title="Professional Cloud Architect Certification"><img src="https://images.credly.com/size/340x340/images/71c579e0-51fd-4247-b493-d2fa8167157a/image.png" alt="Professional Cloud Architect Certification" width="80" height="80"></a>
-
