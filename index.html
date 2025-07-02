@@ -1,520 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-primary: '#6366f1',
-secondary: '#14b8a6'
-},
-borderRadius: {
-'none': '0px',
-'sm': '4px',
-DEFAULT: '8px',
-'md': '12px',
-'lg': '16px',
-'xl': '20px',
-'2xl': '24px',
-'3xl': '32px',
-'full': '9999px',
-'button': '8px'
-}
-}
-}
-}
-</script>
-<style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bento Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Ensure full dark mode by default */
+            @apply bg-gray-900 text-gray-100;
+            /* Center content vertically and horizontally */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+        .bento-grid {
+            display: grid;
+            gap: 1rem; /* Gap between bento boxes */
+            grid-template-columns: 1fr; /* Single column on small screens */
+            grid-template-rows: auto;
+            padding: 1rem;
+            max-width: 1200px;
+            /* Added min-height to make the bento boxes taller */
+            min-height: 90vh; /* Make the grid take up 90% of viewport height */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+            width: 100%; /* Ensure it takes full width within its flex container */
+        }
+
+        @media (min-width: 768px) { /* Medium screens and up */
+            .bento-grid {
+                grid-template-columns: 1fr 2fr; /* Two columns: 1/3 and 2/3 */
+                grid-template-rows: auto;
+            }
+        }
+
+        .bento-box {
+            @apply bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700;
+        }
+
+        .tab-button {
+            @apply px-4 py-2 rounded-md font-medium text-gray-400 hover:text-gray-100 hover:bg-gray-700 transition-colors duration-200;
+        }
+
+        .tab-button.active {
+            @apply bg-purple-600 text-white shadow-md;
+        }
+
+        /* Custom scrollbar for content areas */
+        .scrollable-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollable-content::-webkit-scrollbar-track {
+            background: #2d3748; /* bg-gray-800 */
+            border-radius: 10px;
+        }
+
+        .scrollable-content::-webkit-scrollbar-thumb {
+            background: #6b46c1; /* bg-purple-600 */
+            border-radius: 10px;
+        }
+
+        .scrollable-content::-webkit-scrollbar-thumb:hover {
+            background: #805ad5; /* a lighter purple */
+        }
+
+        /* Keyframes for the floating bubble animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px); /* Float up */
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Apply the animation to skill bubbles */
+        .skill-bubble {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Add slight delays for a more natural, non-uniform movement */
+        .skill-bubble:nth-child(2n) {
+            animation-delay: 0.5s;
+        }
+        .skill-bubble:nth-child(3n) {
+            animation-delay: 1s;
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
-<div class="min-h-screen flex">
-<!-- Left Sidebar -->
-<div class="w-1/4 bg-white border-r border-gray-200 p-8 fixed h-screen overflow-y-auto">
-<div class="text-center mb-8">
-<img src="./assets/images/my-avatar.png"
-alt="Profile"
-class="w-40 h-40 rounded-full mx-auto mb-4 object-cover">
-<h1 class="text-2xl font-bold text-gray-900">Venkatesh padala</h1>
-<p class="text-primary font-medium mb-4">Cloud and Devops Engineer</p>
-<a href="./assets/resume-example.pdf" download class="inline-flex items-center justify-center px-4 py-2 bg-primary text-white rounded-button hover:bg-primary/90 transition-colors">
-<i class="ri-download-line w-5 h-5 flex items-center justify-center mr-2"></i>
-Download Resume
-</a>
-</div>
-<div class="mb-8">
-<h2 class="text-lg font-semibold text-gray-900 mb-4">Contact</h2>
-<div class="space-y-3">
-<a href="mailto:vpadala@outlook.com" class="flex items-center text-gray-600 hover:text-primary">
-<i class="ri-mail-line w-5 h-5 flex items-center justify-center mr-2"></i>
-vpadala@outlook.com
-</a>
-<a href="tel:+919000313233" class="flex items-center text-gray-600 hover:text-primary">
-<i class="ri-phone-line w-5 h-5 flex items-center justify-center mr-2"></i>
-+91-9000313233
-</a>
-<a href="#" class="flex items-center text-gray-600 hover:text-primary">
-<i class="ri-map-pin-line w-5 h-5 flex items-center justify-center mr-2"></i>
-Bengaluru, IN
-</a>
-<a href="https://www.linkedin.com/in/vpadala95" target="_blank" class="flex items-center text-gray-600 hover:text-primary">
-<i class="ri-linkedin-line w-5 h-5 flex items-center justify-center mr-2"></i>
-LinkedIn
-</a>
-<a href="https://github.com/vpadala95" target="_blank" class="flex items-center text-gray-600 hover:text-primary">
-<i class="ri-github-line w-5 h-5 flex items-center justify-center mr-2"></i>
-GitHub
-</a>
-</div>
-</div>
-<div class="mb-8">
-<h2 class="text-lg font-semibold text-gray-900 mb-4">Technical Skills</h2>
-<div class="space-y-6">
-<div>
-<h3 class="text-sm font-semibold text-gray-900 mb-3">Cloud Platforms</h3>
-<div class="grid grid-cols-1 gap-2">
-<div class="flex items-center space-x-2">
-<i class="ri-google-fill w-5 h-5 flex items-center justify-center text-orange-500"></i>
-<span class="text-gray-600 text-sm">GCP (Compute, IAM, VPC, Storage, functions, Database, Kubernetes, Pub-Sub,cloud build, load balancer)</span>
-</div>
-<div class="flex items-center space-x-2">
-<i class="ri-amazon-fill w-5 h-5 flex items-center justify-center text-blue-500"></i>
-<span class="text-gray-600 text-sm">AWS (EC2, IAM, VPC, S3, RDS, EKS, load balancer)</span>
-</div>
-<div class="flex items-center space-x-2">
-<i class="ri-cloud-fill w-5 h-5 flex items-center justify-center text-yellow-500"></i>
-<span class="text-gray-600 text-sm">Oracle Cloud Infrastructure (Compute, VCN, Storage, Database, Kubernetes)</span>
-</div>
-</div>
-</div>
-<div>
-<h3 class="text-sm font-semibold text-gray-900 mb-3">DevOps Tools</h3>
-<div class="grid grid-cols-2 gap-3">
-<div class="flex items-center space-x-2">
-<i class="ri-nodejs-line w-5 h-5 flex items-center justify-center text-green-600"></i>
-<span class="text-gray-600 text-sm">Node.js</span>
-</div>
-<div class="flex items-center space-x-2">
-<i class="ri-database-2-line w-5 h-5 flex items-center justify-center text-blue-600"></i>
-<span class="text-gray-600 text-sm">MongoDB</span>
-</div>
-<div class="flex items-center space-x-2">
-<i class="ri-database-line w-5 h-5 flex items-center justify-center text-orange-600"></i>
-<span class="text-gray-600 text-sm">PostgreSQL</span>
-</div>
-<div class="flex items-center space-x-2">
-<i class="ri-server-line w-5 h-5 flex items-center justify-center text-purple-600"></i>
-<span class="text-gray-600 text-sm">GraphQL</span>
-</div>
-<div class="flex items-center space-x-2">
-<i class="ri-cloud-line w-5 h-5 flex items-center justify-center text-blue-500"></i>
-<span class="text-gray-600 text-sm">AWS</span>
-</div>
-<div class="flex items-center space-x-2">
-<i class="ri-docker-line w-5 h-5 flex items-center justify-center text-blue-400"></i>
-<span class="text-gray-600 text-sm">Docker</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Main Content -->
-<div class="w-2/3 ml-[33.333333%] p-8">
-<div class="flex items-center justify-start mb-8 space-x-2 border-b border-gray-200">
-<button class="px-6 py-3 text-gray-900 border-b-2 border-primary font-medium" onclick="switchTab('home')">Home</button>
-<button class="px-6 py-3 text-gray-600 hover:text-gray-900 font-medium" onclick="switchTab('projects')">Projects</button>
-<button class="px-6 py-3 text-gray-600 hover:text-gray-900 font-medium" onclick="switchTab('experience')">Experience</button>
-<button class="px-6 py-3 text-gray-600 hover:text-gray-900 font-medium" onclick="switchTab('blogs')">Blogs</button>
-</div>
-<div id="home" class="tab-content">
-<div class="mb-12">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">About Me</h2>
-<div class="bg-white rounded-xl shadow-sm p-6 mb-8">
-<p class="text-gray-600 leading-relaxed mb-4">
-Hi, I’m Venkatesh Padala, a passionate DevOps/DevSecOps Engineer experience in driving seamless automation, optimising cloud infrastructures, and accelerating software delivery cycles. With a strong foundation in IT and Telecom, I specialize in building Continuous Integration and Continuous Delivery (CI/CD) pipelines, automating complex deployments, and leveraging cloud services to create scalable and reliable solutions.
-</p>
-<p class="text-gray-600 leading-relaxed mb-4">
-I thrive on transforming manual processes into efficient automated workflows, using tools like Terraform, Docker, Kubernetes, Jenkins, and Ansible. My goal is to help organizations enhance productivity by delivering high-quality, mission-critical software with speed and precision.
-</p>
-<p class="text-gray-600 leading-relaxed">
-I’m committed to continuous improvement, and I'm always eager to learn and explore new technologies that drive innovation in the DevOps space.
-</p>
-</div>
-<div class="bg-white rounded-xl shadow-sm p-6 mb-8">
-<h2 class="text-lg font-semibold text-gray-900 mb-4">Certifications</h2>
-<div class="space-y-4">
-<div class="flex items-start">
-<img src="https://public.readdy.ai/ai/img_res/89f76fae3b2ce5723ecb50e79456254d.jpg" 
-alt="AWS Certification" 
-class="w-12 h-12 rounded-lg mr-4 object-cover">
-<div>
-<h3 class="font-medium text-gray-900">AWS Certified Solutions Architect - Professional</h3>
-<p class="text-sm text-gray-500">Amazon Web Services • Issued Dec 2023</p>
-</div>
-</div>
-<div class="flex items-start">
-<img src="https://public.readdy.ai/ai/img_res/efdf43e8b23c850b8c5928697fc76a92.jpg" 
-alt="Google Cloud Certification" 
-class="w-12 h-12 rounded-lg mr-4 object-cover">
-<div>
-<h3 class="font-medium text-gray-900">Google Cloud Professional Cloud Architect</h3>
-<p class="text-sm text-gray-500">Google Cloud • Issued Aug 2023</p>
-</div>
-</div>
-<div class="flex items-start">
-<img src="https://public.readdy.ai/ai/img_res/52c1eb0bf2dbfb4da448c02d4741caed.jpg" 
-alt="Microsoft Azure Certification" 
-class="w-12 h-12 rounded-lg mr-4 object-cover">
-<div>
-<h3 class="font-medium text-gray-900">Microsoft Certified: Azure Solutions Architect Expert</h3>
-<p class="text-sm text-gray-500">Microsoft • Issued Mar 2023</p>
-</div>
-</div>
-</div>
-</div>
-<div class="bg-white rounded-xl shadow-sm overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=modern e-commerce website interface with clean design, showing product grid and shopping cart, professional UI&width=400&height=200&seq=2&orientation=landscape"
-alt="E-commerce Platform"
-class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 mb-2">E-commerce Platform</h3>
-<p class="text-gray-600 text-sm mb-4">A scalable e-commerce platform built with microservices architecture.</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">React</span>
-<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Node.js</span>
-<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">MongoDB</span>
-</div>
-<div class="flex items-center justify-between">
-<a href="https://github.com/example/ecommerce" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
-<i class="ri-github-fill mr-1"></i>
-View Code
-</a>
-<a href="#" class="text-primary hover:text-primary/80 flex items-center">
-Live Demo
-<i class="ri-external-link-line ml-1"></i>
-</a>
-</div>
-</div>
-</div>
-<div class="bg-white rounded-xl shadow-sm overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=dashboard interface showing analytics and data visualization, modern UI design with charts and graphs&width=400&height=200&seq=3&orientation=landscape"
-alt="Analytics Dashboard"
-class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 mb-2">Analytics Dashboard</h3>
-<p class="text-gray-600 text-sm mb-4">Real-time analytics dashboard with advanced data visualization.</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Vue.js</span>
-<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">D3.js</span>
-<span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Firebase</span>
-</div>
-<div class="flex items-center justify-between">
-<a href="https://github.com/example/analytics" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
-<i class="ri-github-fill mr-1"></i>
-View Code
-</a>
-<a href="#" class="text-primary hover:text-primary/80 flex items-center">
-Live Demo
-<i class="ri-external-link-line ml-1"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="mb-12">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Contribution Activity</h2>
-<div class="bg-white rounded-xl shadow-sm p-6">
-<div id="contributionChart" class="w-full h-[300px]"></div>
-</div>
-</div>
-</div>
-</div>
-<div id="experience" class="tab-content hidden">
-<h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Work Experience</h2>
-<div class="space-y-8 max-w-3xl mx-auto">
-<div class="bg-white rounded-xl shadow-sm p-6">
-<div class="flex items-center justify-between mb-4">
-<div>
-<h3 class="text-lg font-semibold text-gray-900">Senior Software Engineer</h3>
-<p class="text-primary">Google</p>
-</div>
-<span class="text-sm text-gray-500">2022 - Present</span>
-</div>
-<ul class="list-disc list-inside text-gray-600 space-y-2">
-<li>Led a team of 5 engineers in developing cloud-native applications</li>
-<li>Improved system performance by 40% through architecture optimization</li>
-<li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
-</ul>
-</div>
-<div class="bg-white rounded-xl shadow-sm p-6">
-<div class="flex items-center justify-between mb-4">
-<div>
-<h3 class="text-lg font-semibold text-gray-900">Software Engineer</h3>
-<p class="text-primary">Microsoft</p>
-</div>
-<span class="text-sm text-gray-500">2019 - 2022</span>
-</div>
-<ul class="list-disc list-inside text-gray-600 space-y-2">
-<li>Developed and maintained microservices architecture</li>
-<li>Collaborated with product teams to implement new features</li>
-<li>Mentored junior developers and conducted code reviews</li>
-</ul>
-</div>
-<div class="bg-white rounded-xl shadow-sm p-6">
-<div class="flex items-center justify-between mb-4">
-<div>
-<h3 class="text-lg font-semibold text-gray-900">Junior Developer</h3>
-<p class="text-primary">Amazon</p>
-</div>
-<span class="text-sm text-gray-500">2017 - 2019</span>
-</div>
-<ul class="list-disc list-inside text-gray-600 space-y-2">
-<li>Built and maintained RESTful APIs</li>
-<li>Implemented responsive web designs</li>
-<li>Participated in agile development processes</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="projects" class="tab-content hidden">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Featured Projects</h2>
-<div class="grid grid-cols-2 gap-6">
-<div class="bg-white rounded-xl shadow-sm overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=modern e-commerce website interface with clean design, showing product grid and shopping cart, professional UI&width=400&height=200&seq=2&orientation=landscape"
-alt="E-commerce Platform"
-class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 mb-2">E-commerce Platform</h3>
-<p class="text-gray-600 text-sm mb-4">A scalable e-commerce platform built with microservices architecture.</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">React</span>
-<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Node.js</span>
-<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">MongoDB</span>
-</div>
-<div class="flex items-center justify-between">
-<a href="https://github.com/example/ecommerce" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
-<i class="ri-github-fill mr-1"></i>
-View Code
-</a>
-<a href="#" class="text-primary hover:text-primary/80 flex items-center">
-Live Demo
-<i class="ri-external-link-line ml-1"></i>
-</a>
-</div>
-</div>
-</div>
-<div class="bg-white rounded-xl shadow-sm overflow-hidden">
-<img src="https://readdy.ai/api/search-image?query=dashboard interface showing analytics and data visualization, modern UI design with charts and graphs&width=400&height=200&seq=3&orientation=landscape"
-alt="Analytics Dashboard"
-class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 mb-2">Analytics Dashboard</h3>
-<p class="text-gray-600 text-sm mb-4">Real-time analytics dashboard with advanced data visualization.</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Vue.js</span>
-<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">D3.js</span>
-<span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs">Firebase</span>
-</div>
-<div class="flex items-center justify-between">
-<a href="https://github.com/example/analytics" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
-<i class="ri-github-fill mr-1"></i>
-View Code
-</a>
-<a href="#" class="text-primary hover:text-primary/80 flex items-center">
-Live Demo
-<i class="ri-external-link-line ml-1"></i>
-</a>
-</div>
-</div>
-</div>
-<div class="bg-white rounded-xl shadow-sm overflow-hidden">
-<img src="https://public.readdy.ai/ai/img_res/f5363c0e7dcf4e731b180adfaa89e0e7.jpg"
-alt="Chat Application"
-class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 mb-2">Real-time Chat App</h3>
-<p class="text-gray-600 text-sm mb-4">WebSocket-based chat application with real-time messaging.</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Socket.io</span>
-<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Express</span>
-<span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Redis</span>
-</div>
-<div class="flex items-center justify-between">
-<a href="https://github.com/example/chat" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
-<i class="ri-github-fill mr-1"></i>
-View Code
-</a>
-<a href="#" class="text-primary hover:text-primary/80 flex items-center">
-Live Demo
-<i class="ri-external-link-line ml-1"></i>
-</a>
-</div>
-</div>
-</div>
-<div class="bg-white rounded-xl shadow-sm overflow-hidden">
-<img src="https://public.readdy.ai/ai/img_res/abe885a643364cec4455afa2ce4b3ad4.jpg"
-alt="Task Manager"
-class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 mb-2">Task Manager</h3>
-<p class="text-gray-600 text-sm mb-4">Collaborative task management tool with real-time updates.</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Angular</span>
-<span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">NestJS</span>
-<span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">PostgreSQL</span>
-</div>
-<div class="flex items-center justify-between">
-<a href="https://github.com/example/taskmanager" target="_blank" class="text-primary hover:text-primary/80 flex items-center">
-<i class="ri-github-fill mr-1"></i>
-View Code
-</a>
-<a href="#" class="text-primary hover:text-primary/80 flex items-center">
-Live Demo
-<i class="ri-external-link-line ml-1"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="blogs" class="tab-content hidden">
-<h2 class="text-2xl font-bold text-gray-900 mb-6">Latest Blog Posts</h2>
-<div class="grid grid-cols-2 gap-6">
-<div class="bg-white rounded-xl shadow-sm overflow-hidden">
-<img src="https://public.readdy.ai/ai/img_res/1e5e771bb2e268375212bce3f0a8d8b7.jpg"
-alt="Blog Post 1"
-class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 mb-2">Microservices Architecture Best Practices</h3>
-<p class="text-gray-600 text-sm mb-4">A comprehensive guide to building scalable microservices architecture...</p>
-<div class="flex items-center justify-between">
-<span class="text-sm text-gray-500">March 15, 2024</span>
-<a href="#" class="text-primary hover:text-primary/80">Read More</a>
-</div>
-</div>
-</div>
-<div class="bg-white rounded-xl shadow-sm overflow-hidden">
-<img src="https://public.readdy.ai/ai/img_res/5a396d05aa1119068276b5e803924113.jpg"
-alt="Blog Post 2"
-class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-lg font-semibold text-gray-900 mb-2">Cloud Native Development</h3>
-<p class="text-gray-600 text-sm mb-4">Exploring the benefits and challenges of cloud native development...</p>
-<div class="flex items-center justify-between">
-<span class="text-sm text-gray-500">March 1, 2024</span>
-<a href="#" class="text-primary hover:text-primary/80">Read More</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script>
-function switchTab(tabId) {
-document.querySelectorAll('.tab-content').forEach(content => {
-content.classList.add('hidden');
-});
-document.getElementById(tabId).classList.remove('hidden');
-document.querySelectorAll('button').forEach(btn => {
-btn.classList.remove('border-b-2', 'border-primary', 'text-gray-900');
-btn.classList.add('text-gray-600');
-});
-event.target.classList.remove('text-gray-600');
-event.target.classList.add('border-b-2', 'border-primary', 'text-gray-900');
-}
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-const chart = echarts.init(document.getElementById('contributionChart'));
-const option = {
-animation: false,
-tooltip: {
-trigger: 'axis',
-backgroundColor: 'rgba(255, 255, 255, 0.9)',
-borderColor: '#eee',
-borderWidth: 1,
-textStyle: {
-color: '#1f2937'
-}
-},
-grid: {
-left: '3%',
-right: '4%',
-bottom: '3%',
-top: '3%',
-containLabel: true
-},
-xAxis: {
-type: 'category',
-boundaryGap: false,
-data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-axisLine: {
-lineStyle: {
-color: '#e5e7eb'
-}
-},
-axisLabel: {
-color: '#6b7280'
-}
-},
-yAxis: {
-type: 'value',
-axisLine: {
-lineStyle: {
-color: '#e5e7eb'
-}
-},
-axisLabel: {
-color: '#6b7280'
-},
-splitLine: {
-lineStyle: {
-color: '#f3f4f6'
-}
-}
-},
-series: [{
-name: 'Contributions',
-type: 'line',
-smooth: true,
-data: [30, 45, 62, 58, 75, 90, 84, 98, 89, 95, 78, 88],
-itemStyle: {
-color: '#6366f1'
-},
-areaStyle: {
-color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-offset: 0,
-color: 'rgba(99, 102, 241, 0.3)'
-}, {
-offset: 1,
-color: 'rgba(99, 102, 241, 0.1)'
-}])
-},
-lineStyle: {
-width: 3
-},
-symbol: 'none'
-}]
-};
-chart.setOption(option);
-window.addEventListener('resize', function() {
-chart.resize();
-});
-});
-</script>
+<body class="bg-gray-900 text-gray-100">
+
+    <div class="bento-grid">
+        <!-- Pane 1: Profile and Contact -->
+        <div class="bento-box flex flex-col items-center justify-center text-center p-8 md:p-6">
+            <img src="https://placehold.co/120x120/a78bfa/ffffff?text=JP" alt="Profile Picture" class="w-32 h-32 rounded-full mb-4 border-4 border-purple-500 shadow-md">
+            <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Jane P. Doe</h1>
+            <p class="text-md md:text-lg text-gray-400 mb-6">Full Stack Developer | Tech Enthusiast</p>
+
+            <div class="flex space-x-6 mb-6"> <!-- Added mb-6 for spacing below icons -->
+                <!-- Email Icon -->
+                <a href="mailto:jane.doe@example.com" class="text-gray-300 hover:text-purple-400 transition-colors duration-200" aria-label="Email">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-1 10a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12z"></path></svg>
+                </a>
+                <!-- LinkedIn Icon -->
+                <a href="https://linkedin.com/in/janedoe" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-purple-400 transition-colors duration-200" aria-label="LinkedIn">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.23 0H1.77C.8 0 0 .77 0 1.73v20.54C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.23 0zM7.18 20.45H3.5V9.18h3.68v11.27zM5.33 7.62c-1.21 0-2.2-.97-2.2-2.17 0-1.19.99-2.17 2.2-2.17 1.22 0 2.2.98 2.2 2.17 0 1.2-.98 2.17-2.2 2.17zm15.15 12.83h-3.68v-5.56c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.66H9.78V9.18h3.53v1.62h.05c.49-.93 1.69-1.89 3.48-1.89 3.72 0 4.41 2.45 4.41 5.64v6.09z"/></svg>
+                </a>
+                <!-- GitHub Icon -->
+                <a href="https://github.com/janedoe" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-purple-400 transition-colors duration-200" aria-label="GitHub">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.799 8.205 11.385.6.11.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.609-4.043-1.609-.547-1.387-1.334-1.758-1.334-1.758-1.088-.745.083-.73.083-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.807 1.304 3.49.997.108-.775.419-1.304.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.382 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.4 3.003-.404 1.02.004 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.656.238 2.876.118 3.176.77.838 1.233 1.91 1.233 3.22 0 4.61-2.805 5.62-5.475 5.922.43.37.81 1.102.81 2.22s-.01 4.01-.015 4.54c0 .318.22.69.825.57C20.565 21.796 24 17.301 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd"/></svg>
+                </a>
+            </div>
+
+            <!-- Resume Download Button -->
+            <a href="/path/to/your/resume.pdf" download="Jane_Doe_Resume.pdf" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors duration-200 flex items-center justify-center">
+                <i class="fas fa-download mr-2"></i> Download Resume
+            </a>
+        </div>
+
+        <!-- Pane 2: About, Experience, Projects, and Skills with Tabs -->
+        <div class="bento-box flex flex-col">
+            <!-- Aligned tabs to the right -->
+            <div class="flex justify-end space-x-2 md:space-x-4 mb-6 flex-wrap">
+                <button class="tab-button active" data-tab="about">About Me</button>
+                <button class="tab-button" data-tab="experience">Experience</button>
+                <button class="tab-button" data-tab="projects">Projects</button>
+                <button class="tab-button" data-tab="blogs">Blogs</button> <!-- New Blogs Tab Button -->
+            </div>
+
+            <div id="tab-content" class="flex-grow overflow-y-auto scrollable-content pr-2">
+                <!-- About Me Tab Content (now includes skills) -->
+                <div id="about" class="tab-pane active">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">A Bit About Me</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Hello! I'm Jane P. Doe, a passionate Full Stack Developer with a knack for building robust and scalable web applications. My journey in tech began with a fascination for how things work behind the scenes, leading me to dive deep into both front-end aesthetics and back-end logic.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        I thrive in collaborative environments and enjoy solving complex problems that deliver real value. When I'm not coding, you can find me exploring new hiking trails, experimenting with new recipes, or diving into a good book.
+                    </p>
+
+                    <!-- Skills Section - Now part of About Me -->
+                    <h3 class="text-xl font-semibold text-purple-400 mt-6 mb-3">My Key Skills</h3>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <!-- Example Skill Buttons with Font Awesome Icons -->
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fab fa-react text-4xl text-blue-400 mb-1"></i>
+                            <span class="text-sm text-gray-200">React</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fab fa-node-js text-4xl text-green-400 mb-1"></i>
+                            <span class="text-sm text-gray-200">Node.js</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fab fa-docker text-4xl text-blue-500 mb-1"></i>
+                            <span class="text-sm text-gray-200">Docker</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fab fa-python text-4xl text-yellow-400 mb-1"></i>
+                            <span class="text-sm text-gray-200">Python</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fab fa-aws text-4xl text-orange-400 mb-1"></i>
+                            <span class="text-sm text-gray-200">AWS</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fab fa-git-alt text-4xl text-red-500 mb-1"></i>
+                            <span class="text-sm text-gray-200">Git</span>
+                        </div>
+                         <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fas fa-code text-4xl text-blue-300 mb-1"></i> <!-- Generic code icon for TypeScript -->
+                            <span class="text-sm text-gray-200">TypeScript</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fas fa-database text-4xl text-gray-400 mb-1"></i> <!-- Generic database icon for SQL -->
+                            <span class="text-sm text-gray-200">SQL</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fab fa-vuejs text-4xl text-green-500 mb-1"></i>
+                            <span class="text-sm text-gray-200">Vue.js</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fas fa-hashtag text-4xl text-purple-300 mb-1"></i> <!-- Generic icon for C# -->
+                            <span class="text-sm text-gray-200">C#</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-700 rounded-xl shadow-md hover:bg-purple-700 transition-colors duration-200 cursor-pointer skill-bubble">
+                            <i class="fas fa-cubes text-4xl text-cyan-400 mb-1"></i> <!-- Generic icon for Kubernetes -->
+                            <span class="text-sm text-gray-200">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Tab Content -->
+                <div id="experience" class="tab-pane hidden">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">My Professional Journey</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-purple-400">Senior Software Engineer</h3>
+                        <p class="text-gray-400">Tech Solutions Inc. | Jan 2022 - Present</p>
+                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                            <li>Led the development of a new microservices architecture, improving system scalability by 40%.</li>
+                            <li>Mentored junior developers and conducted code reviews, fostering a culture of quality.</li>
+                            <li>Implemented CI/CD pipelines, reducing deployment time by 50%.</li>
+                            <li>Designed and implemented robust RESTful APIs for various client-side applications.</li>
+                            <li>Optimized application performance, resulting in a 15% reduction in load times.</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-purple-400">Software Developer</h3>
+                        <p class="text-gray-400">Web Innovations Co. | Jun 2019 - Dec 2021</p>
+                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                            <li>Developed and maintained responsive user interfaces using React and Redux.</li>
+                            <li>Collaborated with design team to translate UI/UX wireframes into high-quality code.</li>
+                            <li>Optimized database queries, leading to a 20% improvement in data retrieval times.</li>
+                            <li>Participated in daily stand-ups and agile sprint planning meetings.</li>
+                            <li>Contributed to the design and implementation of new features for core products.</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-purple-400">Junior Developer Intern</h3>
+                        <p class="text-gray-400">Startup X | May 2018 - Aug 2018</p>
+                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                            <li>Assisted in front-end development tasks and bug fixing.</li>
+                            <li>Gained hands-on experience with version control (Git) and agile methodologies.</li>
+                            <li>Wrote unit tests and integration tests for new features.</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-purple-400">Freelance Web Developer</h3>
+                        <p class="text-gray-400">Self-Employed | 2017 - Present (Part-time)</p>
+                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                            <li>Developed custom websites for small businesses and individuals.</li>
+                            <li>Managed client communication, project requirements, and delivery timelines.</li>
+                            <li>Specialized in WordPress and custom HTML/CSS/JS solutions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Projects Tab Content -->
+                <div id="projects" class="tab-pane hidden">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Featured Projects</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-purple-400">E-commerce Platform</h3>
+                        <p class="text-gray-400">A full-stack e-commerce application built with MERN stack.</p>
+                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                            <li>Features: User authentication, product catalog, shopping cart, payment gateway integration.</li>
+                            <li>Technologies: React, Node.js, Express, MongoDB, Stripe API.</li>
+                        </ul>
+                        <div class="mt-3 flex space-x-4">
+                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-purple-400">Task Management App</h3>
+                        <p class="text-gray-400">A responsive task management application with real-time updates.</p>
+                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                            <li>Features: CRUD operations for tasks, drag-and-drop reordering, user collaboration.</li>
+                            <li>Technologies: Vue.js, Firebase (Firestore, Authentication).</li>
+                        </ul>
+                        <div class="mt-3 flex space-x-4">
+                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-purple-400">Personal Blog</h3>
+                        <p class="text-gray-400">A static site generated blog for sharing technical articles.</p>
+                        <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+                            <li>Features: Markdown support, syntax highlighting, responsive design.</li>
+                            <li>Technologies: Next.js, Tailwind CSS, Markdown.</li>
+                        </ul>
+                        <div class="mt-3 flex space-x-4">
+                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="#" class="text-purple-300 hover:text-purple-500 underline" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Blogs Tab Content -->
+                <div id="blogs" class="tab-pane hidden">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">My Latest Blogs</h2>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-purple-400">Understanding Microservices Architecture</h3>
+                        <p class="text-gray-400 mb-2">A deep dive into designing and implementing scalable microservices.</p>
+                        <a href="https://medium.com/@janedoe/understanding-microservices-architecture-example-link" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-500 underline flex items-center">
+                            Read on Medium <i class="fab fa-medium ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-purple-400">Getting Started with React Hooks</h3>
+                        <p class="text-gray-400 mb-2">A beginner-friendly guide to functional components and hooks in React.</p>
+                        <a href="https://medium.com/@janedoe/getting-started-with-react-hooks-example-link" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-500 underline flex items-center">
+                            Read on Medium <i class="fab fa-medium ml-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-purple-400">DevOps Best Practices for Small Teams</h3>
+                        <p class="text-gray-400 mb-2">Tips and tools to streamline your development and operations workflow.</p>
+                        <a href="https://medium.com/@janedoe/devops-best-practices-for-small-teams-example-link" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:text-purple-500 underline flex items-center">
+                            Read on Medium <i class="fab fa-medium ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and hide all panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.add('hidden'));
+
+                    // Add active class to the clicked button
+                    button.classList.add('active');
+
+                    // Show the corresponding tab pane
+                    const targetTabId = button.dataset.tab;
+                    document.getElementById(targetTabId).classList.remove('hidden');
+                });
+            });
+
+            // Set initial height for scrollable content based on parent
+            const tabContentContainer = document.getElementById('tab-content');
+            const parentBox = tabContentContainer.closest('.bento-box');
+
+            const adjustTabContentHeight = () => {
+                // Calculate available height for content within the bento-box
+                // Subtract the height of the tab buttons section and any top/bottom padding/margin
+                const tabButtonsHeight = tabButtons[0].closest('div').offsetHeight;
+                const parentPaddingY = parseFloat(getComputedStyle(parentBox).paddingTop) + parseFloat(getComputedStyle(parentBox).paddingBottom);
+                const availableHeight = parentBox.clientHeight - tabButtonsHeight - parentPaddingY - 24; // 24px for mb-6 on tab buttons div
+
+                tabContentContainer.style.height = `${availableHeight}px`;
+            };
+
+            // Adjust height on load and on window resize
+            adjustTabContentHeight();
+            window.addEventListener('resize', adjustTabContentHeight);
+        });
+    </script>
 </body>
 </html>
