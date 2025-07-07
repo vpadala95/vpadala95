@@ -11,7 +11,12 @@ I thrive on transforming manual processes into efficient automated workflows, us
 - 📊 Monitoring & Logging: **Prometheus, Grafana, ELK**
 
 I’m committed to continuous improvement, and I'm always eager to learn and explore new technologies that drive innovation in the DevOps space.
-
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=vpadala95&label=Profile%20views&color=0e75b6&style=flat" alt="vpadala95" /> </p>
+---
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://dev.to/vpadala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="vpadala" height="30" width="40" /></a>
+</p>
 ---
 
 ## <a name="skills"></a>🛠️ Skillset
