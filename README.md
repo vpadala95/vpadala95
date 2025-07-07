@@ -19,12 +19,6 @@ I’m committed to continuous improvement, and I'm always eager to learn and exp
     <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,aws,bash,bitbucket,elasticsearch,gcp,github,githubactions,gitlab,grafana,jenkins,linux,nginx,postgres,prometheus,py,redis,terraform," />
   </a>
 </p>
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://dev.to/vpadala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="vpadala" height="30" width="40" /></a>
-</p>
-<a href="https://medium.com/@vpadala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@vpadala" height="30" width="40" /></a>
-</p>
 ## Blogs posts
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
