@@ -25,4 +25,7 @@ I’m committed to continuous improvement, and I'm always eager to learn and exp
 </p>
 <a href="https://medium.com/@vpadala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@vpadala" height="30" width="40" /></a>
 </p>
+## Blogs posts
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=vpadala95&label=Profile%20views&color=0e75b6&style=flat" alt="vpadala95" /> </p>
