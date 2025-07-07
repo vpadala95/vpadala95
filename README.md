@@ -2,7 +2,6 @@ Hi, I’m Venkatesh Padala, a passionate DevOps/DevSecOps Engineer experience in
 
 I thrive on transforming manual processes into efficient automated workflows, using tools like Terraform, Docker, Kubernetes, Jenkins, and Ansible. My goal is to help organizations enhance productivity by delivering high-quality, mission-critical software with speed and precision.
 
-<h3 align="center">A passionate frontend developer from India</h3>
 - ⚙️ CI/CD: **Jenkin, Github-Actions, Gitlab pipelines**
 - ☁️ Cloud Platforms: **GCP, AWS, OCI**
 - 🔧 Automation & IaC **Terraform, Ansible**
@@ -10,10 +9,6 @@ I thrive on transforming manual processes into efficient automated workflows, us
 - 💻 Scripting & Automation: [Shell Scripting,python](Shell Scripting,python)
 - 🐳 Containerization: **Docker, Kubernetes**
 - 📊 Monitoring & Logging: **Prometheus, Grafana, ELK**
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-</p>
-
 
 I’m committed to continuous improvement, and I'm always eager to learn and explore new technologies that drive innovation in the DevOps space.
 
